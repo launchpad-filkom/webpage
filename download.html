@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download - Launchpad FILKOM</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy': '#1e3a8a',
+                        'orange': '#f97316',
+                        'teal': '#0d9488',
+                        'background-light': '#f8fafc',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'display': ['DM Sans', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="bg-white text-slate-900">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-2">
+                    <img src="maskot-bara-launchpad.png" alt="Launchpad FILKOM Logo" class="h-14 md:h-16 lg:h-20 w-auto">
+                    <div class="hidden md:flex md:items-center md:space-x-0">
+                        <span class="text-xl md:text-2xl font-bold text-navy leading-tight">Launchpad</span>
+                        <span class="text-xl md:text-2xl font-bold text-orange leading-tight">FILKOM</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8 relative">
+                    <nav class="flex items-center space-x-8">
+                        <a href="index.html" class="text-slate-700 hover:text-orange font-medium transition-colors">Home</a>
+                        <a href="tentang.html" class="text-slate-700 hover:text-orange font-medium transition-colors">Tentang</a>
+                        <a href="syarat.html" class="text-slate-700 hover:text-orange font-medium transition-colors">Syarat & Ketentuan</a>
+                    </nav>
+
+                    <!-- Desktop 'Lainnya' dropdown -->
+                    <div class="relative">
+                        <button id="more-menu-desktop-btn" aria-expanded="false" class="inline-flex items-center gap-1 text-slate-700 font-medium hover:text-orange transition-colors">
+                            <span>Lainnya</span>
+                            <span class="material-icons-round text-slate-500 text-sm">expand_more</span>
+                        </button>
+
+                        <div id="more-menu-desktop" class="hidden absolute right-0 mt-2 w-56 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 py-2 z-50">
+                            <a href="tahapan.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100">Tahapan</a>
+                            <a href="faq.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100">FAQ</a>
+                            <a href="download.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Download</a>
+                        </div>
+                    </div>
+
+                    <!-- Daftar button -->
+                    <a href="syarat.html#daftar" class="inline-flex items-center bg-orange text-white px-6 py-2.5 rounded-full font-bold hover:bg-orange-600 transition-all shadow-lg shadow-orange-500/30">
+                        Daftar Sekarang
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100" id="mobile-menu-btn">
+                    <span class="material-icons-round">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="hidden lg:hidden bg-white border-t border-slate-200" id="mobile-menu">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="index.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100 rounded-lg">Home</a>
+                <a href="tentang.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100 rounded-lg">Tentang</a>
+                <a href="syarat.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100 rounded-lg">Syarat & Ketentuan</a>
+                <a href="syarat.html#daftar" class="block px-4 py-2 bg-orange text-white text-center rounded-lg font-bold">Daftar Sekarang</a>
+
+                <!-- More toggle -->
+                <button id="more-menu-btn" class="w-full text-left px-4 py-2 rounded-lg hover:bg-slate-100 flex items-center justify-between text-slate-700 font-medium">
+                    <span class="text-slate-700">Lainnya</span>
+                    <span class="material-icons-round text-slate-500">expand_more</span>
+                </button>
+
+                <div id="more-menu" class="hidden mt-2 space-y-2">
+                    <a href="tahapan.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100 rounded-lg">Tahapan</a>
+                    <a href="faq.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100 rounded-lg">FAQ</a>
+                    <a href="download.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Download</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-12 bg-gradient-to-br from-navy to-teal text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <h1 class="text-5xl lg:text-6xl font-extrabold mb-6">Download Resources</h1>
+                <p class="text-xl text-white/90">
+                    Unduh template, panduan, dan dokumen pendukung yang Anda butuhkan untuk mengikuti Program Launchpad FILKOM
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+        <!-- Petunjuk Teknis Section -->
+        <section class="mb-16">
+            <div class="mb-8">
+                <h2 class="text-3xl lg:text-4xl font-extrabold text-navy mb-3">Petunjuk Teknis</h2>
+                <p class="text-lg text-slate-600">Dokumen resmi dan pedoman pelaksanaan program</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Petunjuk Teknis Program -->
+                <div class="bg-gradient-to-br from-navy to-teal text-white rounded-2xl p-8 hover:shadow-2xl transition-shadow">
+                    <div class="flex items-start gap-4 mb-6">
+                        <div class="flex-shrink-0 w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
+                            <span class="material-icons-round text-white text-3xl">book</span>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold mb-3">Petunjuk Teknis Program</h3>
+                            <p class="text-white/90 mb-6">Dokumen lengkap berisi aturan, ketentuan, dan pedoman pelaksanaan Program Launchpad FILKOM 2026</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between pt-6 border-t border-white/20">
+                        <span class="text-sm text-white/80 font-medium">PDF • 5.4 MB</span>
+                        <a href="#" class="inline-flex items-center gap-2 bg-white text-navy px-6 py-3 rounded-lg font-bold hover:bg-white/90 transition-colors">
+                            Download
+                            <span class="material-icons-round">download</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Timeline & Milestone -->
+                <div class="bg-gradient-to-br from-orange to-pink-500 text-white rounded-2xl p-8 hover:shadow-2xl transition-shadow">
+                    <div class="flex items-start gap-4 mb-6">
+                        <div class="flex-shrink-0 w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
+                            <span class="material-icons-round text-white text-3xl">event</span>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold mb-3">Timeline & Milestone</h3>
+                            <p class="text-white/90 mb-6">Jadwal lengkap program inkubasi dengan milestone dan deliverables setiap fase</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between pt-6 border-t border-white/20">
+                        <span class="text-sm text-white/80 font-medium">PDF • 1.8 MB</span>
+                        <a href="#" class="inline-flex items-center gap-2 bg-white text-orange px-6 py-3 rounded-lg font-bold hover:bg-white/90 transition-colors">
+                            Download
+                            <span class="material-icons-round">download</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Help Section -->
+        <section class="bg-background-light rounded-3xl p-8 lg:p-12 text-center">
+            <div class="max-w-2xl mx-auto">
+                <div class="w-16 h-16 bg-orange/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <span class="material-icons-round text-orange text-4xl">help_outline</span>
+                </div>
+                <h3 class="text-2xl lg:text-3xl font-bold text-navy mb-4">Butuh Bantuan?</h3>
+                <p class="text-lg text-slate-600 mb-8">
+                    Jika Anda mengalami kendala dalam mengunduh dokumen atau memiliki pertanyaan terkait materi program, jangan ragu untuk menghubungi kami.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="kontak.html" class="inline-flex items-center justify-center gap-2 px-8 py-3 bg-orange text-white rounded-full font-bold hover:bg-orange-600 transition-colors shadow-lg shadow-orange-500/30">
+                        <span class="material-icons-round">mail</span>
+                        Hubungi Kami
+                    </a>
+                    <a href="faq.html" class="inline-flex items-center justify-center gap-2 px-8 py-3 bg-white border-2 border-slate-200 text-slate-700 rounded-full font-bold hover:border-orange hover:text-orange transition-colors">
+                        <span class="material-icons-round">quiz</span>
+                        Lihat FAQ
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="maskot-bara-launchpad.png" alt="Launchpad FILKOM" class="h-12 w-auto">
+                        <div>
+                            <span class="text-xl font-bold block leading-tight">Launchpad</span>
+                            <span class="text-sm font-bold text-orange block leading-tight">FILKOM</span>
+                        </div>
+                    </div>
+                    <p class="text-white/70 mb-6 leading-relaxed">A Digital Startup Incubation Program</p>
+                    <p class="text-sm text-white/60 mb-6">Fakultas Ilmu Komputer<br>Universitas Brawijaya</p>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-orange rounded-full flex items-center justify-center transition-colors">
+                            <span class="material-icons-round text-sm">tag</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-orange rounded-full flex items-center justify-center transition-colors">
+                            <span class="material-icons-round text-sm">link</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-orange rounded-full flex items-center justify-center transition-colors">
+                            <span class="material-icons-round text-sm">mail</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-orange rounded-full flex items-center justify-center transition-colors">
+                            <span class="material-icons-round text-sm">play_arrow</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h5 class="text-lg font-bold mb-6 text-orange">Quick Links</h5>
+                    <ul class="space-y-3">
+                        <li><a href="tentang.html" class="text-white/70 hover:text-orange transition-colors">Tentang Program</a></li>
+                        <li><a href="syarat.html" class="text-white/70 hover:text-orange transition-colors">Syarat & Pendaftaran</a></li>
+                        <li><a href="tahapan.html" class="text-white/70 hover:text-orange transition-colors">Tahapan</a></li>
+                        <li><a href="manfaat.html" class="text-white/70 hover:text-orange transition-colors">Manfaat</a></li>
+                        <li><a href="faq.html" class="text-white/70 hover:text-orange transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="text-lg font-bold mb-6 text-orange">Resources</h5>
+                    <ul class="space-y-3">
+                        <li><a href="download.html" class="text-white/70 hover:text-orange transition-colors">Download Template</a></li>
+                        <li><a href="download.html" class="text-white/70 hover:text-orange transition-colors">Petunjuk Teknis</a></li>
+                        <li><a href="timeline.html" class="text-white/70 hover:text-orange transition-colors">Timeline</a></li>
+                        <li><a href="tim.html" class="text-white/70 hover:text-orange transition-colors">Tim Mentor</a></li>
+                        <li><a href="kontak.html" class="text-white/70 hover:text-orange transition-colors">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="text-lg font-bold mb-6 text-orange">Kontak</h5>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span class="material-icons-round text-orange text-sm mt-0.5">mail</span>
+                            <span class="text-white/70 text-sm">launchpad@filkom.ub.ac.id</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-icons-round text-orange text-sm mt-0.5">phone</span>
+                            <span class="text-white/70 text-sm">+62 xxx-xxxx-xxxx</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-icons-round text-orange text-sm mt-0.5">location_on</span>
+                            <span class="text-white/70 text-sm">Jl. Veteran, Ketawanggede<br>Kota Malang, Jawa Timur 65145</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-white/60 text-sm">© 2026 Launchpad FILKOM - Fakultas Ilmu Komputer Universitas Brawijaya. All rights reserved.</p>
+                <div class="flex gap-6 text-sm">
+                    <a href="#" class="text-white/60 hover:text-orange transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-white/60 hover:text-orange transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        if (mobileBtn) {
+            mobileBtn.addEventListener('click', function() {
+                const mm = document.getElementById('mobile-menu');
+                if (mm) mm.classList.toggle('hidden');
+            });
+        }
+
+        // More menu toggle for compact mobile menu
+        const moreBtn = document.getElementById('more-menu-btn');
+        if (moreBtn) {
+            moreBtn.addEventListener('click', function() {
+                const more = document.getElementById('more-menu');
+                if (more) more.classList.toggle('hidden');
+            });
+        }
+
+        // Desktop 'Lainnya' dropdown toggle + outside click
+        const moreDesktopBtn = document.getElementById('more-menu-desktop-btn');
+        const moreDesktop = document.getElementById('more-menu-desktop');
+        if (moreDesktopBtn && moreDesktop) {
+            moreDesktopBtn.addEventListener('click', function(e) {
+                const expanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', String(!expanded));
+                moreDesktop.classList.toggle('hidden');
+            });
+
+            // Close on outside click
+            document.addEventListener('click', function(event) {
+                if (!moreDesktop.contains(event.target) && !moreDesktopBtn.contains(event.target)) {
+                    if (!moreDesktop.classList.contains('hidden')) {
+                        moreDesktop.classList.add('hidden');
+                        moreDesktopBtn.setAttribute('aria-expanded', 'false');
+                    }
+                }
+            });
+
+            // Close on Escape
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    if (!moreDesktop.classList.contains('hidden')) {
+                        moreDesktop.classList.add('hidden');
+                        moreDesktopBtn.setAttribute('aria-expanded', 'false');
+                    }
+                }
+            });
+        }
+
+        // Smooth Scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (!href || href === '#') return;
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Navbar shadow on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (!navbar) return;
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>

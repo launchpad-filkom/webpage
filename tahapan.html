@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tahapan - Launchpad FILKOM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy': '#1e3a8a',
+                        'orange': '#f97316',
+                        'teal': '#14b8a6',
+                        'background-light': '#f8fafc'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                        'dm-sans': ['DM Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-content.open {
+            max-height: 1000px;
+        }
+    </style>
+</head>
+<body class="bg-background-light font-inter">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <img src="maskot-bara-launchpad.png" alt="Launchpad FILKOM Mascot" class="h-12 w-auto">
+                    <div>
+                        <h1 class="text-xl font-bold text-navy">Launchpad FILKOM</h1>
+                        <p class="text-sm text-gray-600">Program Inkubasi Startup Digital</p>
+                    </div>
+                </div>
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-700 hover:text-navy transition-colors">Home</a>
+                    <a href="tentang.html" class="text-gray-700 hover:text-navy transition-colors">Tentang</a>
+                    <a href="syarat.html" class="text-gray-700 hover:text-navy transition-colors">Syarat & Ketentuan</a>
+                    <div class="relative">
+                        <button id="more-menu-desktop-btn" class="text-gray-700 hover:text-navy transition-colors flex items-center">
+                            Lainnya <span class="material-icons-round text-sm ml-1">expand_more</span>
+                        </button>
+                        <div id="more-menu-desktop" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10 hidden">
+                            <a href="tahapan.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Tahapan</a>
+                            <a href="faq.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">FAQ</a>
+                            <a href="download.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Download</a>
+                        </div>
+                    </div>
+                    <a href="#daftar" class="bg-orange text-white px-4 py-2 rounded-md hover:bg-orange-600 transition-colors">Daftar</a>
+                </nav>
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <span class="material-icons-round">menu</span>
+                </button>
+            </div>
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <nav class="flex flex-col space-y-2">
+                    <a href="index.html" class="text-gray-700 hover:text-navy transition-colors py-2">Home</a>
+                    <a href="tentang.html" class="text-gray-700 hover:text-navy transition-colors py-2">Tentang</a>
+                    <a href="syarat.html" class="text-gray-700 hover:text-navy transition-colors py-2">Syarat & Ketentuan</a>
+                    <button id="more-menu-btn" class="text-gray-700 hover:text-navy transition-colors py-2 flex items-center justify-between">
+                        Lainnya <span class="material-icons-round text-sm">expand_more</span>
+                    </button>
+                    <div id="more-menu" class="hidden pl-4 space-y-2">
+                        <a href="tahapan.html" class="block text-gray-700 hover:text-navy py-1">Tahapan</a>
+                        <a href="faq.html" class="block text-gray-700 hover:text-navy py-1">FAQ</a>
+                        <a href="kontak.html" class="block text-gray-700 hover:text-navy py-1">Kontak</a>
+                        <a href="download.html" class="block text-gray-700 hover:text-navy py-1">Download</a>
+                    </div>
+                    <a href="#daftar" class="bg-orange text-white px-4 py-2 rounded-md hover:bg-orange-600 transition-colors text-center">Daftar</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-12 bg-gradient-to-br from-navy to-teal text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <h1 class="text-5xl lg:text-6xl font-extrabold mb-6">Tahapan Program</h1>
+                <p class="text-xl text-white/90">
+                    Program inkubasi startup digital selama 22 minggu dengan tahapan terstruktur untuk mengembangkan ide menjadi produk yang siap diluncurkan ke pasar
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Timeline Overview -->
+        <div class="bg-white rounded-lg shadow-md p-8 mb-12">
+            <h2 class="text-2xl font-bold text-navy mb-6 text-center">Lini masa Program</h2>
+            <div class="relative">
+                <!-- Timeline line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-teal h-full"></div>
+                
+                <!-- Phase 1: Ideation -->
+                <div class="relative flex items-center mb-8">
+                    <div class="flex-1 text-right pr-8">
+                        <div class="bg-navy text-white p-4 rounded-lg shadow-md">
+                            <h3 class="font-bold">Minggu 1-4: Ideation</h3>
+                            <p class="text-xs text-gray-200 mb-2">3 Februari - 2 Maret 2026</p>
+                            <p class="text-sm">Pengembangan ide bisnis, validasi pasar, dan pembentukan tim.</p>
+                        </div>
+                    </div>
+                    <div class="w-4 h-4 bg-teal rounded-full border-4 border-white shadow-md z-10"></div>
+                    <div class="flex-1 pl-8"></div>
+                </div>
+
+                <!-- Phase 2: Development -->
+                <div class="relative flex items-center mb-8">
+                    <div class="flex-1 pl-8"></div>
+                    <div class="w-4 h-4 bg-teal rounded-full border-4 border-white shadow-md z-10"></div>
+                    <div class="flex-1 text-left pl-8">
+                        <div class="bg-orange text-white p-4 rounded-lg shadow-md">
+                            <h3 class="font-bold">Minggu 5-12: Development</h3>
+                            <p class="text-xs text-gray-100 mb-2">3 Maret - 27 April 2026</p>
+                            <p class="text-sm">Pengembangan MVP, prototyping, dan iterasi berdasarkan feedback.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 3: Growth -->
+                <div class="relative flex items-center mb-8">
+                    <div class="flex-1 text-right pr-8">
+                        <div class="bg-teal text-white p-4 rounded-lg shadow-md">
+                            <h3 class="font-bold">Minggu 13-18: Growth</h3>
+                            <p class="text-xs text-gray-100 mb-2">28 April - 8 Juni 2026</p>
+                            <p class="text-sm">Pengembangan pasar, akuisisi pengguna, dan persiapan skalabilitas.</p>
+                        </div>
+                    </div>
+                    <div class="w-4 h-4 bg-teal rounded-full border-4 border-white shadow-md z-10"></div>
+                    <div class="flex-1 pl-8"></div>
+                </div>
+
+                <!-- Phase 4: Demo Day -->
+                <div class="relative flex items-center">
+                    <div class="flex-1 pl-8"></div>
+                    <div class="w-4 h-4 bg-teal rounded-full border-4 border-white shadow-md z-10"></div>
+                    <div class="flex-1 text-left pl-8">
+                        <div class="bg-navy text-white p-4 rounded-lg shadow-md">
+                            <h3 class="font-bold">Minggu 19-22: Demo Day</h3>
+                            <p class="text-xs text-gray-200 mb-2">9 Juni - 6 Juli 2026</p>
+                            <p class="text-sm">Persiapan presentasi akhir, pitching kepada investor, dan penutupan program.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Phases Accordion -->
+        <div class="bg-white rounded-lg shadow-md p-8">
+            <h2 class="text-2xl font-bold text-navy mb-6 text-center">Detail Tahapan Mingguan</h2>
+            
+            <!-- Minggu 1-4: Ideation -->
+            <div class="border-b border-gray-200">
+                <button class="accordion-btn w-full text-left py-4 px-6 bg-gray-50 hover:bg-gray-100 transition-colors flex justify-between items-center" data-target="ideation">
+                    <div class="flex-1">
+                        <span class="font-semibold text-navy">Minggu 1-4: Ideation</span>
+                        <span class="block text-sm text-gray-500 mt-1">3 Februari - 2 Maret 2026</span>
+                    </div>
+                    <span class="material-icons-round text-gray-500">expand_more</span>
+                </button>
+                <div id="ideation" class="accordion-content px-6 pb-4">
+                    <div class="grid md:grid-cols-2 gap-6 pt-4">
+                        <div>
+                            <h4 class="font-bold text-teal mb-2">Aktivitas Utama:</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Workshop ide bisnis dan validasi pasar</li>
+                                <li>Pembentukan tim startup</li>
+                                <li>Analisis kompetitor</li>
+                                <li>Pengembangan business model canvas</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-teal mb-2">Output:</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Ide bisnis yang tervalidasi</li>
+                                <li>Tim yang solid</li>
+                                <li>Business model yang jelas</li>
+                                <li>Presentasi ide awal</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Minggu 5-12: Development -->
+            <div class="border-b border-gray-200">
+                <button class="accordion-btn w-full text-left py-4 px-6 bg-gray-50 hover:bg-gray-100 transition-colors flex justify-between items-center" data-target="development">
+                    <div class="flex-1">
+                        <span class="font-semibold text-navy">Minggu 5-12: Development</span>
+                        <span class="block text-sm text-gray-500 mt-1">3 Maret - 27 April 2026</span>
+                    </div>
+                    <span class="material-icons-round text-gray-500">expand_more</span>
+                </button>
+                <div id="development" class="accordion-content px-6 pb-4">
+                    <div class="grid md:grid-cols-2 gap-6 pt-4">
+                        <div>
+                            <h4 class="font-bold text-orange mb-2">Aktivitas Utama:</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Pengembangan MVP (Minimum Viable Product)</li>
+                                <li>UI/UX design dan prototyping</li>
+                                <li>Development coding dan testing</li>
+                                <li>Iterasi berdasarkan feedback mentor</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-orange mb-2">Output:</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>MVP yang berfungsi</li>
+                                <li>Prototype yang dapat diuji</li>
+                                <li>User testing results</li>
+                                <li>Iterasi produk berdasarkan feedback</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Minggu 13-18: Growth -->
+            <div class="border-b border-gray-200">
+                <button class="accordion-btn w-full text-left py-4 px-6 bg-gray-50 hover:bg-gray-100 transition-colors flex justify-between items-center" data-target="growth">
+                    <div class="flex-1">
+                        <span class="font-semibold text-navy">Minggu 13-18: Growth</span>
+                        <span class="block text-sm text-gray-500 mt-1">28 April - 8 Juni 2026</span>
+                    </div>
+                    <span class="material-icons-round text-gray-500">expand_more</span>
+                </button>
+                <div id="growth" class="accordion-content px-6 pb-4">
+                    <div class="grid md:grid-cols-2 gap-6 pt-4">
+                        <div>
+                            <h4 class="font-bold text-teal mb-2">Aktivitas Utama:</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Strategi pemasaran dan akuisisi pengguna</li>
+                                <li>Partnership dan kolaborasi</li>
+                                <li>Optimisasi produk berdasarkan data</li>
+                                <li>Persiapan untuk skalabilitas</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-teal mb-2">Output:</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Strategi growth yang efektif</li>
+                                <li>User acquisition metrics</li>
+                                <li>Partnership deals</li>
+                                <li>Roadmap skalabilitas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Minggu 19-22: Demo Day -->
+            <div>
+                <button class="accordion-btn w-full text-left py-4 px-6 bg-gray-50 hover:bg-gray-100 transition-colors flex justify-between items-center" data-target="demo">
+                    <div class="flex-1">
+                        <span class="font-semibold text-navy">Minggu 19-22: Demo Day</span>
+                        <span class="block text-sm text-gray-500 mt-1">9 Juni - 6 Juli 2026</span>
+                    </div>
+                    <span class="material-icons-round text-gray-500">expand_more</span>
+                </button>
+                <div id="demo" class="accordion-content px-6 pb-4">
+                    <div class="grid md:grid-cols-2 gap-6 pt-4">
+                        <div>
+                            <h4 class="font-bold text-navy mb-2">Aktivitas Utama:</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Persiapan pitch deck dan presentasi</li>
+                                <li>Rehearsal pitching kepada investor</li>
+                                <li>Networking dengan investor dan partner</li>
+                                <li>Evaluasi akhir program</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy mb-2">Output:</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Pitch deck profesional</li>
+                                <li>Demo day presentation</li>
+                                <li>Investor meetings</li>
+                                <li>Program completion certificate</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center mt-12">
+            <a href="#daftar" class="bg-orange text-white px-8 py-3 rounded-md hover:bg-orange-600 transition-colors text-lg font-semibold">
+                Daftar Sekarang
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="maskot-bara-launchpad.png" alt="Launchpad FILKOM Mascot" class="h-10 w-auto">
+                        <div>
+                            <h3 class="font-bold">Launchpad FILKOM</h3>
+                            <p class="text-sm text-gray-300">Program Inkubasi Startup Digital</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm">
+                        Mengembangkan startup digital dari ide hingga produk yang siap bersaing di pasar.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Program</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="tentang.html" class="text-gray-300 hover:text-white transition-colors">Tentang</a></li>
+                        <li><a href="tahapan.html" class="text-gray-300 hover:text-white transition-colors">Tahapan</a></li>
+                        <li><a href="manfaat.html" class="text-gray-300 hover:text-white transition-colors">Manfaat</a></li>
+                        <li><a href="timeline.html" class="text-gray-300 hover:text-white transition-colors">Timeline</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Dukungan</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="tim.html" class="text-gray-300 hover:text-white transition-colors">Tim</a></li>
+                        <li><a href="faq.html" class="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="kontak.html" class="text-gray-300 hover:text-white transition-colors">Kontak</a></li>
+                        <li><a href="download.html" class="text-gray-300 hover:text-white transition-colors">Download</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Ikuti Kami</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <span class="material-icons-round">facebook</span>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <span class="material-icons-round">twitter</span>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <span class="material-icons-round">linkedin</span>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <span class="material-icons-round">instagram</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-300">
+                <p>&copy; 2024 Launchpad FILKOM. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // More menu toggle for mobile
+        const moreMenuBtn = document.getElementById('more-menu-btn');
+        const moreMenu = document.getElementById('more-menu');
+        moreMenuBtn.addEventListener('click', () => {
+            moreMenu.classList.toggle('hidden');
+        });
+
+        // More menu toggle for desktop
+        const moreMenuDesktopBtn = document.getElementById('more-menu-desktop-btn');
+        const moreMenuDesktop = document.getElementById('more-menu-desktop');
+        moreMenuDesktopBtn.addEventListener('click', () => {
+            moreMenuDesktop.classList.toggle('hidden');
+        });
+
+        // Accordion functionality
+        const accordionBtns = document.querySelectorAll('.accordion-btn');
+        accordionBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const target = document.getElementById(btn.dataset.target);
+                const isOpen = target.classList.contains('open');
+                
+                // Close all accordions
+                document.querySelectorAll('.accordion-content').forEach(content => {
+                    content.classList.remove('open');
+                });
+                
+                // Toggle current accordion
+                if (!isOpen) {
+                    target.classList.add('open');
+                }
+            });
+        });
+
+        // Navbar shadow on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 0) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

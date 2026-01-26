@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Launchpad FILKOM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy': '#1e3a8a',
+                        'orange': '#f97316',
+                        'teal': '#14b8a6',
+                        'background-light': '#f8fafc'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                        'dm-sans': ['DM Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+<body class="bg-background-light font-inter">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <img src="maskot-bara-launchpad.png" alt="Launchpad FILKOM Mascot" class="h-12 w-auto">
+                    <div>
+                        <h1 class="text-xl font-bold text-navy">Launchpad FILKOM</h1>
+                        <p class="text-sm text-gray-600">Program Inkubasi Startup Digital</p>
+                    </div>
+                </div>
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-700 hover:text-navy transition-colors">Home</a>
+                    <a href="tentang.html" class="text-gray-700 hover:text-navy transition-colors">Tentang</a>
+                    <a href="syarat.html" class="text-gray-700 hover:text-navy transition-colors">Syarat</a>
+                    <div class="relative">
+                        <button id="more-menu-desktop-btn" class="text-gray-700 hover:text-navy transition-colors flex items-center">
+                            Lainnya <span class="material-icons-round text-sm ml-1">expand_more</span>
+                        </button>
+                        <div id="more-menu-desktop" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10 hidden">
+                            <a href="tahapan.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100">Tahapan</a>
+                            <a href="faq.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100">FAQ</a>
+                            <a href="download.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Download</a>
+                        </div>
+                    </div>
+                    <a href="#daftar" class="bg-orange text-white px-4 py-2 rounded-md hover:bg-orange-600 transition-colors">Daftar</a>
+                </nav>
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <span class="material-icons-round">menu</span>
+                </button>
+            </div>
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <nav class="flex flex-col space-y-2">
+                    <a href="index.html" class="text-gray-700 hover:text-navy transition-colors py-2">Home</a>
+                    <a href="tentang.html" class="text-gray-700 hover:text-navy transition-colors py-2">Tentang</a>
+                    <a href="syarat.html" class="text-gray-700 hover:text-navy transition-colors py-2">Syarat</a>
+                    <button id="more-menu-btn" class="text-gray-700 hover:text-navy transition-colors py-2 flex items-center justify-between">
+                        Lainnya <span class="material-icons-round text-sm">expand_more</span>
+                    </button>
+                    <div id="more-menu" class="hidden pl-4 space-y-2">
+                        <a href="tahapan.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100">Tahapan</a>
+                        <a href="faq.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100">FAQ</a>
+                        <a href="download.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Download</a>
+                    </div>
+                    <a href="#daftar" class="bg-orange text-white px-4 py-2 rounded-md hover:bg-orange-600 transition-colors text-center">Daftar</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-12 bg-gradient-to-br from-navy to-teal text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <h1 class="text-5xl lg:text-6xl font-extrabold mb-6">FAQ</h1>
+                <p class="text-xl text-white/90">
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <!-- FAQ Categories -->
+        <div class="mb-10">
+            <div class="flex flex-wrap gap-2 justify-center">
+                <button class="faq-category-btn px-5 py-2 rounded-lg bg-orange text-white font-medium hover:bg-orange-600 transition-colors" data-category="all">Semua</button>
+                <button class="faq-category-btn px-5 py-2 rounded-lg bg-gray-200 text-gray-700 hover:bg-gray-300 font-medium transition-colors" data-category="pendaftaran">Pendaftaran</button>
+                <button class="faq-category-btn px-5 py-2 rounded-lg bg-gray-200 text-gray-700 hover:bg-gray-300 font-medium transition-colors" data-category="program">Program</button>
+                <button class="faq-category-btn px-5 py-2 rounded-lg bg-gray-200 text-gray-700 hover:bg-gray-300 font-medium transition-colors" data-category="teknis">Teknis</button>
+                <button class="faq-category-btn px-5 py-2 rounded-lg bg-gray-200 text-gray-700 hover:bg-gray-300 font-medium transition-colors" data-category="lainnya">Lainnya</button>
+            </div>
+        </div>
+
+        <!-- FAQ List -->
+        <div class="space-y-3">
+            <!-- FAQ Item 1 -->
+            <div class="bg-white rounded-xl border-2 border-gray-100 hover:border-orange/30 transition-all faq-item" data-category="pendaftaran">
+                <button class="faq-question w-full text-left p-6 flex items-start gap-4 hover:bg-gray-50/50 transition-colors rounded-xl">
+                    <div class="flex-shrink-0 w-10 h-10 bg-orange/10 rounded-lg flex items-center justify-center mt-1">
+                        <span class="material-icons-round text-orange text-xl">person</span>
+                    </div>
+                    <div class="flex-1">
+                        <span class="font-semibold text-navy text-lg block mb-1">Siapa yang bisa mendaftar Program Launchpad FILKOM?</span>
+                    </div>
+                    <span class="material-icons-round text-gray-400 faq-icon flex-shrink-0 mt-1">expand_more</span>
+                </button>
+                <div class="faq-answer hidden px-6 pb-6">
+                    <div class="ml-14 pt-2">
+                        <p class="text-gray-700 leading-relaxed">Program ini terbuka untuk mahasiswa aktif Fakultas Ilmu Komputer (FILKOM) dari semua jurusan dan angkatan. Peserta dapat mendaftar secara individu maupun tim (maksimal 3 orang per tim).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="bg-white rounded-xl border-2 border-gray-100 hover:border-orange/30 transition-all faq-item" data-category="pendaftaran">
+                <button class="faq-question w-full text-left p-6 flex items-start gap-4 hover:bg-gray-50/50 transition-colors rounded-xl">
+                    <div class="flex-shrink-0 w-10 h-10 bg-teal/10 rounded-lg flex items-center justify-center mt-1">
+                        <span class="material-icons-round text-teal text-xl">login</span>
+                    </div>
+                    <div class="flex-1">
+                        <span class="font-semibold text-navy text-lg block mb-1">Bagaimana cara mendaftar?</span>
+                    </div>
+                    <span class="material-icons-round text-gray-400 faq-icon flex-shrink-0 mt-1">expand_more</span>
+                </button>
+                <div class="faq-answer hidden px-6 pb-6">
+                    <div class="ml-14 pt-2">
+                        <p class="text-gray-700 leading-relaxed">Pendaftaran dilakukan secara online melalui website ini. Klik tombol "Daftar Sekarang", kemudian isi formulir pendaftaran dan upload dokumen yang diperlukan (proposal ide, CV, dan portofolio jika ada).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="bg-white rounded-xl border-2 border-gray-100 hover:border-orange/30 transition-all faq-item" data-category="pendaftaran">
+                <button class="faq-question w-full text-left p-6 flex items-start gap-4 hover:bg-gray-50/50 transition-colors rounded-xl">
+                    <div class="flex-shrink-0 w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mt-1">
+                        <span class="material-icons-round text-green-600 text-xl">payments</span>
+                    </div>
+                    <div class="flex-1">
+                        <span class="font-semibold text-navy text-lg block mb-1">Apakah ada biaya pendaftaran?</span>
+                    </div>
+                    <span class="material-icons-round text-gray-400 faq-icon flex-shrink-0 mt-1">expand_more</span>
+                </button>
+                <div class="faq-answer hidden px-6 pb-6">
+                    <div class="ml-14 pt-2">
+                        <p class="text-gray-700 leading-relaxed">Tidak, Program Launchpad FILKOM sepenuhnya <strong class="text-green-600">GRATIS</strong> untuk semua mahasiswa FILKOM. Tidak ada biaya pendaftaran, biaya program, atau biaya tersembunyi lainnya.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="bg-white rounded-xl border-2 border-gray-100 hover:border-orange/30 transition-all faq-item" data-category="program">
+                <button class="faq-question w-full text-left p-6 flex items-start gap-4 hover:bg-gray-50/50 transition-colors rounded-xl">
+                    <div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mt-1">
+                        <span class="material-icons-round text-blue-600 text-xl">schedule</span>
+                    </div>
+                    <div class="flex-1">
+                        <span class="font-semibold text-navy text-lg block mb-1">Berapa lama durasi program ini?</span>
+                    </div>
+                    <span class="material-icons-round text-gray-400 faq-icon flex-shrink-0 mt-1">expand_more</span>
+                </button>
+                <div class="faq-answer hidden px-6 pb-6">
+                    <div class="ml-14 pt-2">
+                        <p class="text-gray-700 leading-relaxed">Program berlangsung selama <strong class="text-navy">6 bulan</strong>, dimulai dari Februari hingga Agustus 2026. Program dibagi menjadi 4 fase utama: Pre-Incubation, Core Incubation, Final Selection, dan Go-to-Market.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="bg-white rounded-xl border-2 border-gray-100 hover:border-orange/30 transition-all faq-item" data-category="program">
+                <button class="faq-question w-full text-left p-6 flex items-start gap-4 hover:bg-gray-50/50 transition-colors rounded-xl">
+                    <div class="flex-shrink-0 w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mt-1">
+                        <span class="material-icons-round text-purple-600 text-xl">devices</span>
+                    </div>
+                    <div class="flex-1">
+                        <span class="font-semibold text-navy text-lg block mb-1">Apakah program ini dilakukan secara online atau offline?</span>
+                    </div>
+                    <span class="material-icons-round text-gray-400 faq-icon flex-shrink-0 mt-1">expand_more</span>
+                </button>
+                <div class="faq-answer hidden px-6 pb-6">
+                    <div class="ml-14 pt-2">
+                        <p class="text-gray-700 leading-relaxed">Program dilaksanakan secara <strong class="text-navy">hybrid</strong> (kombinasi online dan offline). Sesi mentoring dan workshop dapat dilakukan secara online, namun beberapa acara penting seperti Final Pitching akan dilakukan secara offline di kampus FILKOM.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="bg-white rounded-xl border-2 border-gray-100 hover:border-orange/30 transition-all faq-item" data-category="program">
+                <button class="faq-question w-full text-left p-6 flex items-start gap-4 hover:bg-gray-50/50 transition-colors rounded-xl">
+                    <div class="flex-shrink-0 w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center mt-1">
+                        <span class="material-icons-round text-yellow-600 text-xl">redeem</span>
+                    </div>
+                    <div class="flex-1">
+                        <span class="font-semibold text-navy text-lg block mb-1">Apa yang akan saya dapatkan dari program ini?</span>
+                    </div>
+                    <span class="material-icons-round text-gray-400 faq-icon flex-shrink-0 mt-1">expand_more</span>
+                </button>
+                <div class="faq-answer hidden px-6 pb-6">
+                    <div class="ml-14 pt-2">
+                        <p class="text-gray-700 leading-relaxed mb-3">Peserta akan mendapatkan:</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1 ml-4">
+                            <li>Dana hibah total Rp 10 juta (launching grant + profiling grant)</li>
+                            <li>Konversi 10 SKS + 4 SKS sebagai PKL</li>
+                            <li>Mentoring intensif dari praktisi dan akademisi berpengalaman</li>
+                            <li>Workshop dan training seputar entrepreneurship dan teknologi</li>
+                            <li>Networking dengan investor, industri, dan sesama founder</li>
+                            <li>Kesempatan pitching di Final Selection</li>
+                            <li>Sertifikat kelulusan program</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 7 -->
+            <div class="bg-white rounded-xl border-2 border-gray-100 hover:border-orange/30 transition-all faq-item" data-category="teknis">
+                <button class="faq-question w-full text-left p-6 flex items-start gap-4 hover:bg-gray-50/50 transition-colors rounded-xl">
+                    <div class="flex-shrink-0 w-10 h-10 bg-pink-100 rounded-lg flex items-center justify-center mt-1">
+                        <span class="material-icons-round text-pink-600 text-xl">lightbulb</span>
+                    </div>
+                    <div class="flex-1">
+                        <span class="font-semibold text-navy text-lg block mb-1">Apakah saya harus sudah punya ide bisnis saat mendaftar?</span>
+                    </div>
+                    <span class="material-icons-round text-gray-400 faq-icon flex-shrink-0 mt-1">expand_more</span>
+                </button>
+                <div class="faq-answer hidden px-6 pb-6">
+                    <div class="ml-14 pt-2">
+                        <p class="text-gray-700 leading-relaxed">Ya, peserta diharapkan sudah memiliki ide bisnis atau konsep awal produk digital yang ingin dikembangkan. Namun, ide tersebut tidak perlu sempurna - kami akan membantu Anda memvalidasi dan mengembangkannya selama program.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 8 -->
+            <div class="bg-white rounded-xl border-2 border-gray-100 hover:border-orange/30 transition-all faq-item" data-category="teknis">
+                <button class="faq-question w-full text-left p-6 flex items-start gap-4 hover:bg-gray-50/50 transition-colors rounded-xl">
+                    <div class="flex-shrink-0 w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center mt-1">
+                        <span class="material-icons-round text-indigo-600 text-xl">code</span>
+                    </div>
+                    <div class="flex-1">
+                        <span class="font-semibold text-navy text-lg block mb-1">Apakah saya harus bisa coding?</span>
+                    </div>
+                    <span class="material-icons-round text-gray-400 faq-icon flex-shrink-0 mt-1">expand_more</span>
+                </button>
+                <div class="faq-answer hidden px-6 pb-6">
+                    <div class="ml-14 pt-2">
+                        <p class="text-gray-700 leading-relaxed">Tidak wajib semua anggota tim bisa coding, tetapi minimal ada satu orang dalam tim yang memiliki kemampuan teknis untuk mengembangkan produk. Tim yang ideal terdiri dari kombinasi technical dan non-technical roles (developer, designer, business, marketing).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 9 -->
+            <div class="bg-white rounded-xl border-2 border-gray-100 hover:border-orange/30 transition-all faq-item" data-category="program">
+                <button class="faq-question w-full text-left p-6 flex items-start gap-4 hover:bg-gray-50/50 transition-colors rounded-xl">
+                    <div class="flex-shrink-0 w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center mt-1">
+                        <span class="material-icons-round text-red-600 text-xl">groups</span>
+                    </div>
+                    <div class="flex-1">
+                        <span class="font-semibold text-navy text-lg block mb-1">Berapa banyak tim yang akan diterima?</span>
+                    </div>
+                    <span class="material-icons-round text-gray-400 faq-icon flex-shrink-0 mt-1">expand_more</span>
+                </button>
+                <div class="faq-answer hidden px-6 pb-6">
+                    <div class="ml-14 pt-2">
+                        <p class="text-gray-700 leading-relaxed">Program ini akan menerima maksimal <strong class="text-navy">10 tim startup terpilih</strong>. Seleksi dilakukan berdasarkan kualitas ide, kelengkapan dokumen, dan potensi tim untuk berkembang.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 10 -->
+            <div class="bg-white rounded-xl border-2 border-gray-100 hover:border-orange/30 transition-all faq-item" data-category="lainnya">
+                <button class="faq-question w-full text-left p-6 flex items-start gap-4 hover:bg-gray-50/50 transition-colors rounded-xl">
+                    <div class="flex-shrink-0 w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center mt-1">
+                        <span class="material-icons-round text-emerald-600 text-xl">attach_money</span>
+                    </div>
+                    <div class="flex-1">
+                        <span class="font-semibold text-navy text-lg block mb-1">Apakah ada dana hibah atau funding yang diberikan?</span>
+                    </div>
+                    <span class="material-icons-round text-gray-400 faq-icon flex-shrink-0 mt-1">expand_more</span>
+                </button>
+                <div class="faq-answer hidden px-6 pb-6">
+                    <div class="ml-14 pt-2">
+                        <p class="text-gray-700 leading-relaxed">Ya! Setiap tim yang lolos seleksi akan mendapatkan total <strong class="text-navy">Rp 10 juta</strong> yang terdiri dari launching grant dan profiling grant. Dana ini dapat digunakan untuk mengembangkan produk dan menjalankan bisnis startup Anda.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 11 -->
+            <div class="bg-white rounded-xl border-2 border-gray-100 hover:border-orange/30 transition-all faq-item" data-category="lainnya">
+                <button class="faq-question w-full text-left p-6 flex items-start gap-4 hover:bg-gray-50/50 transition-colors rounded-xl">
+                    <div class="flex-shrink-0 w-10 h-10 bg-cyan-100 rounded-lg flex items-center justify-center mt-1">
+                        <span class="material-icons-round text-cyan-600 text-xl">event_busy</span>
+                    </div>
+                    <div class="flex-1">
+                        <span class="font-semibold text-navy text-lg block mb-1">Bagaimana jika saya tidak bisa mengikuti seluruh program?</span>
+                    </div>
+                    <span class="material-icons-round text-gray-400 faq-icon flex-shrink-0 mt-1">expand_more</span>
+                </button>
+                <div class="faq-answer hidden px-6 pb-6">
+                    <div class="ml-14 pt-2">
+                        <p class="text-gray-700 leading-relaxed">Komitmen penuh sangat diharapkan. Namun, kami memahami ada kondisi tertentu yang tidak dapat dihindari. Jika ada kendala, segera komunikasikan dengan tim pengelola program. Tingkat kehadiran minimal <strong class="text-navy">80%</strong> diperlukan untuk mendapatkan sertifikat kelulusan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 12 -->
+            <div class="bg-white rounded-xl border-2 border-gray-100 hover:border-orange/30 transition-all faq-item" data-category="pendaftaran">
+                <button class="faq-question w-full text-left p-6 flex items-start gap-4 hover:bg-gray-50/50 transition-colors rounded-xl">
+                    <div class="flex-shrink-0 w-10 h-10 bg-orange/10 rounded-lg flex items-center justify-center mt-1">
+                        <span class="material-icons-round text-orange text-xl">calendar_today</span>
+                    </div>
+                    <div class="flex-1">
+                        <span class="font-semibold text-navy text-lg block mb-1">Kapan batas waktu pendaftaran?</span>
+                    </div>
+                    <span class="material-icons-round text-gray-400 faq-icon flex-shrink-0 mt-1">expand_more</span>
+                </button>
+                <div class="faq-answer hidden px-6 pb-6">
+                    <div class="ml-14 pt-2">
+                        <p class="text-gray-700 leading-relaxed">Pendaftaran dibuka hingga <strong class="text-orange">15 Februari 2026, pukul 23:59:59</strong>. Pengumuman hasil seleksi akan disampaikan setelah proses seleksi selesai, dan program dimulai pada 23 Februari 2026.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 13 -->
+            <div class="bg-white rounded-xl border-2 border-gray-100 hover:border-orange/30 transition-all faq-item" data-category="lainnya">
+                <button class="faq-question w-full text-left p-6 flex items-start gap-4 hover:bg-gray-50/50 transition-colors rounded-xl">
+                    <div class="flex-shrink-0 w-10 h-10 bg-teal/10 rounded-lg flex items-center justify-center mt-1">
+                        <span class="material-icons-round text-teal text-xl">contact_support</span>
+                    </div>
+                    <div class="flex-1">
+                        <span class="font-semibold text-navy text-lg block mb-1">Siapa yang bisa saya hubungi jika ada pertanyaan lebih lanjut?</span>
+                    </div>
+                    <span class="material-icons-round text-gray-400 faq-icon flex-shrink-0 mt-1">expand_more</span>
+                </button>
+                <div class="faq-answer hidden px-6 pb-6">
+                    <div class="ml-14 pt-2">
+                        <p class="text-gray-700 leading-relaxed">Anda dapat menghubungi kami melalui email di <a href="mailto:launchpad@filkom.ub.ac.id" class="text-orange hover:underline font-medium">launchpad@filkom.ub.ac.id</a> atau melalui halaman <a href="kontak.html" class="text-orange hover:underline font-medium">Kontak</a> di website ini.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Still Have Questions -->
+        <div class="mt-12 bg-gradient-to-br from-navy to-teal text-white rounded-lg p-8 text-center">
+            <h2 class="text-2xl font-bold mb-4">Masih punya pertanyaan?</h2>
+            <p class="mb-6">Jangan ragu untuk menghubungi kami. Tim kami siap membantu Anda!</p>
+                <a href="kontak.html" class="inline-block bg-orange text-white px-8 py-3 rounded-lg hover:bg-orange-600 transition-colors font-semibold">
+                    Hubungi Kami
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="maskot-bara-launchpad.png" alt="Launchpad FILKOM Mascot" class="h-10 w-auto">
+                        <div>
+                            <h3 class="font-bold">Launchpad FILKOM</h3>
+                            <p class="text-sm text-gray-300">Program Inkubasi Startup Digital</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm">
+                        Mengembangkan startup digital dari ide hingga produk yang siap bersaing di pasar.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Program</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="tentang.html" class="text-gray-300 hover:text-white transition-colors">Tentang</a></li>
+                        <li><a href="tahapan.html" class="text-gray-300 hover:text-white transition-colors">Tahapan</a></li>
+                        <li><a href="manfaat.html" class="text-gray-300 hover:text-white transition-colors">Manfaat</a></li>
+                        <li><a href="timeline.html" class="text-gray-300 hover:text-white transition-colors">Timeline</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Dukungan</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="tim.html" class="text-gray-300 hover:text-white transition-colors">Tim</a></li>
+                        <li><a href="faq.html" class="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="kontak.html" class="text-gray-300 hover:text-white transition-colors">Kontak</a></li>
+                        <li><a href="download.html" class="text-gray-300 hover:text-white transition-colors">Download</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Ikuti Kami</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <span class="material-icons-round">facebook</span>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <span class="material-icons-round">twitter</span>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <span class="material-icons-round">linkedin</span>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <span class="material-icons-round">instagram</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-300">
+                <p>&copy; 2024 Launchpad FILKOM. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // More menu toggle for mobile
+        const moreMenuBtn = document.getElementById('more-menu-btn');
+        const moreMenu = document.getElementById('more-menu');
+        moreMenuBtn.addEventListener('click', () => {
+            moreMenu.classList.toggle('hidden');
+        });
+
+        // More menu toggle for desktop
+        const moreMenuDesktopBtn = document.getElementById('more-menu-desktop-btn');
+        const moreMenuDesktop = document.getElementById('more-menu-desktop');
+        moreMenuDesktopBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            moreMenuDesktop.classList.toggle('hidden');
+        });
+
+        // Close dropdown on outside click
+        document.addEventListener('click', (e) => {
+            if (!moreMenuDesktop.contains(e.target) && !moreMenuDesktopBtn.contains(e.target)) {
+                moreMenuDesktop.classList.add('hidden');
+            }
+        });
+
+        // Close dropdown on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                moreMenuDesktop.classList.add('hidden');
+            }
+        });
+
+        // FAQ Accordion functionality
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const answer = faqItem.querySelector('.faq-answer');
+                const icon = question.querySelector('.faq-icon');
+
+                // Toggle answer visibility
+                answer.classList.toggle('hidden');
+
+                // Rotate icon
+                if (answer.classList.contains('hidden')) {
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Category filter functionality
+        const categoryBtns = document.querySelectorAll('.faq-category-btn');
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const category = btn.dataset.category;
+
+                // Update active button
+                categoryBtns.forEach(b => {
+                    b.classList.remove('bg-orange', 'text-white');
+                    b.classList.add('bg-gray-200', 'text-gray-700');
+                });
+                btn.classList.remove('bg-gray-200', 'text-gray-700');
+                btn.classList.add('bg-orange', 'text-white');
+
+                // Filter FAQ items
+                faqItems.forEach(item => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Navbar shadow on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 0) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syarat & Pendaftaran - Launchpad FILKOM</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy': '#1e3a8a',
+                        'orange': '#f97316',
+                        'teal': '#0d9488',
+                        'background-light': '#f8fafc',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'display': ['DM Sans', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="bg-white text-slate-900">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-4">
+                    <img src="maskot-bara-launchpad.png" alt="Launchpad FILKOM Logo" class="h-14 md:h-16 lg:h-20 w-auto">
+                    <div class="hidden md:flex md:items-center md:space-x-0">
+                        <span class="text-xl md:text-2xl font-bold text-navy leading-tight">Launchpad</span>
+                        <span class="text-xl md:text-2xl font-bold text-orange leading-tight">FILKOM</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8 relative">
+                    <nav class="flex items-center space-x-8">
+                        <a href="index.html" class="text-slate-700 hover:text-orange font-medium transition-colors">Home</a>
+                        <a href="tentang.html" class="text-slate-700 hover:text-orange font-medium transition-colors">Tentang</a>
+                        <a href="syarat.html" class="text-slate-700 hover:text-orange font-medium transition-colors">Syarat & Ketentuan</a>
+                    </nav>
+
+                    <!-- Desktop 'Lainnya' dropdown -->
+                    <div class="relative">
+                        <button id="more-menu-desktop-btn" aria-expanded="false" class="inline-flex items-center gap-1 text-slate-700 font-medium hover:text-orange transition-colors">
+                            <span>Lainnya</span>
+                            <span class="material-icons-round text-slate-500 text-sm">expand_more</span>
+                        </button>
+
+                        <div id="more-menu-desktop" class="hidden absolute right-0 mt-2 w-56 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 py-2 z-50">
+                            <a href="tahapan.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100">Tahapan</a>
+                            <a href="faq.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100">FAQ</a>
+                            <a href="download.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Download</a>
+                        </div>
+                    </div>
+
+                    <!-- Daftar button -->
+                    <a href="#daftar" class="inline-flex items-center bg-orange text-white px-6 py-2.5 rounded-full font-bold hover:bg-orange-600 transition-all shadow-lg shadow-orange-500/30">
+                        Daftar Sekarang
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100" id="mobile-menu-btn">
+                    <span class="material-icons-round">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (simplified) -->
+        <div class="hidden lg:hidden bg-white border-t border-slate-200" id="mobile-menu">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="index.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100 rounded-lg">Home</a>
+                <a href="tentang.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100 rounded-lg">Tentang</a>
+                <a href="syarat.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100 rounded-lg">Syarat & Ketentuan</a>
+                <a href="#daftar" class="block px-4 py-2 bg-orange text-white text-center rounded-lg font-bold">Daftar Sekarang</a>
+
+                <!-- More toggle -->
+                <button id="more-menu-btn" class="w-full text-left px-4 py-2 rounded-lg hover:bg-slate-100 flex items-center justify-between text-slate-700 font-medium">
+                    <span class="text-slate-700">Lainnya</span>
+                    <span class="material-icons-round text-slate-500">expand_more</span>
+                </button>
+
+                <div id="more-menu" class="hidden mt-2 space-y-2">
+                    <a href="tahapan.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100 rounded-lg">Tahapan</a>
+                    <a href="faq.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100 rounded-lg">FAQ</a>
+                    <a href="kontak.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100 rounded-lg">Kontak</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-12 bg-gradient-to-br from-navy to-teal text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <h1 class="text-5xl lg:text-6xl font-extrabold mb-6">Syarat & Pendaftaran</h1>
+                <p class="text-xl text-white/90">
+                    Persyaratan, syarat kelulusan, dan cara mendaftar Program Launchpad FILKOM
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Siapa yang Bisa Ikut Section -->
+    <section class="py-20 lg:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl lg:text-5xl font-extrabold text-navy mb-12 text-center">Siapa yang Bisa Ikut?</h2>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Card 1: Kriteria Peserta -->
+                <div class="bg-background-light rounded-3xl p-10 shadow-xl border-t-4 border-orange">
+                    <div class="w-16 h-16 bg-orange/10 rounded-2xl flex items-center justify-center mb-6">
+                        <span class="material-icons-round text-orange text-4xl">how_to_reg</span>
+                    </div>
+                    <h3 class="text-3xl font-bold text-navy mb-6">Kriteria Peserta</h3>
+                    <ul class="space-y-4">
+                        <li class="flex gap-3 items-start">
+                            <span class="material-icons-round text-orange flex-shrink-0 mt-0.5">check_circle</span>
+                            <span class="text-lg text-slate-700">Status mahasiswa aktif program sarjana semester 1-6</span>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <span class="material-icons-round text-orange flex-shrink-0 mt-0.5">check_circle</span>
+                            <span class="text-lg text-slate-700">Dari seluruh program studi di FILKOM UB</span>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <span class="material-icons-round text-orange flex-shrink-0 mt-0.5">check_circle</span>
+                            <span class="text-lg text-slate-700">Minat terhadap kewirausahaan dan pengembangan produk digital</span>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <span class="material-icons-round text-orange flex-shrink-0 mt-0.5">check_circle</span>
+                            <span class="text-lg text-slate-700">Memiliki ide bisnis awal</span>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <span class="material-icons-round text-orange flex-shrink-0 mt-0.5">check_circle</span>
+                            <span class="text-lg text-slate-700">Komposisi tim: 3 orang (diutamakan lintas disiplin: developer, desain, bisnis)</span>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <span class="material-icons-round text-orange flex-shrink-0 mt-0.5">check_circle</span>
+                            <span class="text-lg text-slate-700">Setiap tim wajib menetapkan ketua tim</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Card 2: Kriteria Seleksi -->
+                <div class="bg-background-light rounded-3xl p-10 shadow-xl border-t-4 border-teal">
+                    <div class="w-16 h-16 bg-teal/10 rounded-2xl flex items-center justify-center mb-6">
+                        <span class="material-icons-round text-teal text-4xl">fact_check</span>
+                    </div>
+                    <h3 class="text-3xl font-bold text-navy mb-6">Kriteria Seleksi</h3>
+                    <ul class="space-y-4">
+                        <li class="flex gap-3 items-start">
+                            <span class="material-icons-round text-teal flex-shrink-0 mt-0.5">verified</span>
+                            <span class="text-lg text-slate-700">Status mahasiswa aktif</span>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <span class="material-icons-round text-teal flex-shrink-0 mt-0.5">verified</span>
+                            <span class="text-lg text-slate-700">Minat dan motivasi kewirausahaan</span>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <span class="material-icons-round text-teal flex-shrink-0 mt-0.5">verified</span>
+                            <span class="text-lg text-slate-700">Kualitas ide bisnis awal</span>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <span class="material-icons-round text-teal flex-shrink-0 mt-0.5">verified</span>
+                            <span class="text-lg text-slate-700">Kesediaan mengikuti seluruh rangkaian kegiatan</span>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <span class="material-icons-round text-teal flex-shrink-0 mt-0.5">verified</span>
+                            <div>
+                                <span class="text-lg text-slate-700">Penilaian berdasarkan:</span>
+                                <div class="mt-2 ml-4 space-y-1 text-slate-600">
+                                    <div>• Potensi tim</div>
+                                    <div>• Komitmen belajar</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Syarat Kelulusan Section -->
+    <section class="py-20 lg:py-32 bg-background-light">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl lg:text-5xl font-extrabold text-navy mb-12 text-center">Syarat Kelulusan Program</h2>
+            
+            <div class="bg-white rounded-3xl p-10 shadow-xl mb-8">
+                <div class="space-y-6">
+                    <div class="flex gap-4 items-start p-6 bg-green-50 rounded-xl border-l-4 border-green-500">
+                        <span class="material-icons-round text-green-600 flex-shrink-0 text-3xl">task_alt</span>
+                        <p class="text-lg text-slate-700">Mengikuti seluruh rangkaian kegiatan inkubasi sesuai ketentuan</p>
+                    </div>
+                    
+                    <div class="flex gap-4 items-start p-6 bg-green-50 rounded-xl border-l-4 border-green-500">
+                        <span class="material-icons-round text-green-600 flex-shrink-0 text-3xl">task_alt</span>
+                        <p class="text-lg text-slate-700">Menunjukkan perkembangan yang jelas pada ide/produk</p>
+                    </div>
+                    
+                    <div class="flex gap-4 items-start p-6 bg-green-50 rounded-xl border-l-4 border-green-500">
+                        <span class="material-icons-round text-green-600 flex-shrink-0 text-3xl">task_alt</span>
+                        <p class="text-lg text-slate-700">Menghasilkan minimal Minimum Viable Product (MVP)</p>
+                    </div>
+                    
+                    <div class="flex gap-4 items-start p-6 bg-green-50 rounded-xl border-l-4 border-green-500">
+                        <span class="material-icons-round text-green-600 flex-shrink-0 text-3xl">task_alt</span>
+                        <p class="text-lg text-slate-700">Mempresentasikan hasil pengembangan pada tahap akhir program</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-yellow-50 border-l-4 border-yellow-500 rounded-xl p-8">
+                <div class="flex gap-4">
+                    <span class="material-icons-round text-yellow-600 text-3xl flex-shrink-0">info</span>
+                    <div>
+                        <h4 class="text-xl font-bold text-navy mb-2">Catatan Penting</h4>
+                        <p class="text-lg text-slate-700">
+                            Program ini tidak hanya menilai hasil akhir, tetapi juga proses pembelajaran dan perkembangan tim sepanjang inkubasi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cara Mendaftar Section -->
+    <section class="py-20 lg:py-32 bg-white" id="daftar">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl lg:text-5xl font-extrabold text-navy mb-12 text-center">Cara Mendaftar</h2>
+            
+            <!-- Steps -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <!-- Step 1 -->
+                <div class="relative">
+                    <div class="text-center">
+                        <div class="w-24 h-24 mx-auto bg-gradient-to-br from-navy to-teal rounded-full flex items-center justify-center mb-6 shadow-xl relative">
+                            <span class="material-icons-round text-white" style="font-size: 48px;">edit_note</span>
+                            <div class="absolute -top-2 -right-2 w-10 h-10 bg-orange text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg">1</div>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy mb-3">Persiapkan Dokumen</h3>
+                        <ul class="text-slate-600 space-y-2 text-sm text-left">
+                            <li class="flex gap-2">
+                                <span class="material-icons-round text-orange text-sm">arrow_right</span>
+                                <span>Identitas anggota kelompok + transkrip nilai sementara</span>
+                            </li>
+                            <li class="flex gap-2">
+                                <span class="material-icons-round text-orange text-sm">arrow_right</span>
+                                <span>Judul produk & nama startup</span>
+                            </li>
+                            <li class="flex gap-2">
+                                <span class="material-icons-round text-orange text-sm">arrow_right</span>
+                                <span>Proposal sesuai template</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="relative">
+                    <div class="text-center">
+                        <div class="w-24 h-24 mx-auto bg-gradient-to-br from-orange to-red-500 rounded-full flex items-center justify-center mb-6 shadow-xl relative">
+                            <span class="material-icons-round text-white" style="font-size: 48px;">web</span>
+                            <div class="absolute -top-2 -right-2 w-10 h-10 bg-orange text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg">2</div>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy mb-3">Isi Formulir Online</h3>
+                        <p class="text-slate-600 mb-4 text-sm">Lengkapi formulir pendaftaran online dengan data tim dan unggah dokumen</p>
+                        <a href="#" class="inline-flex items-center px-5 py-2.5 bg-orange text-white rounded-full font-bold hover:bg-orange-600 transition-all text-sm">
+                            Buka Formulir
+                            <span class="material-icons-round ml-1 text-sm">open_in_new</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="relative">
+                    <div class="text-center">
+                        <div class="w-24 h-24 mx-auto bg-gradient-to-br from-teal to-cyan-500 rounded-full flex items-center justify-center mb-6 shadow-xl relative">
+                            <span class="material-icons-round text-white" style="font-size: 48px;">mic</span>
+                            <div class="absolute -top-2 -right-2 w-10 h-10 bg-orange text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg">3</div>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy mb-3">Ikuti Seleksi</h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="bg-background-light rounded-lg p-3">
+                                <div class="font-semibold text-navy">17-18 Feb 2026</div>
+                                <div class="text-slate-600">Seleksi Dokumen</div>
+                            </div>
+                            <div class="bg-background-light rounded-lg p-3">
+                                <div class="font-semibold text-navy">19 Feb 2026</div>
+                                <div class="text-slate-600">Idea Pitching</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="relative">
+                    <div class="text-center">
+                        <div class="w-24 h-24 mx-auto bg-gradient-to-br from-purple-600 to-pink-500 rounded-full flex items-center justify-center mb-6 shadow-xl relative">
+                            <span class="material-icons-round text-white" style="font-size: 48px;">celebration</span>
+                            <div class="absolute -top-2 -right-2 w-10 h-10 bg-orange text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg">4</div>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy mb-3">Pengumuman</h3>
+                        <p class="text-slate-600 mb-4 text-sm">Hasil seleksi akan diumumkan</p>
+                        <div class="bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-xl p-4 text-sm">
+                            <div class="font-bold text-lg">20 Februari 2026</div>
+                            <div class="text-white/90 mt-1">Pengumuman Kelulusan</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Download Section -->
+            <div class="bg-gradient-to-br from-navy to-teal rounded-3xl p-10 text-white">
+                <h3 class="text-3xl font-bold mb-8 text-center">Download Dokumen Pendaftaran</h3>
+                <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                    <a href="download.html" class="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all group">
+                        <span class="material-icons-round text-5xl">description</span>
+                        <div class="text-left flex-1">
+                            <div class="font-bold text-lg">Template Proposal</div>
+                            <div class="text-white/80 text-sm">Format DOCX</div>
+                        </div>
+                        <span class="material-icons-round group-hover:translate-x-1 transition-transform">download</span>
+                    </a>
+                    
+                    <a href="download.html" class="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all group">
+                        <span class="material-icons-round text-5xl">picture_as_pdf</span>
+                        <div class="text-left flex-1">
+                            <div class="font-bold text-lg">Petunjuk Teknis Lengkap</div>
+                            <div class="text-white/80 text-sm">Format PDF</div>
+                        </div>
+                        <span class="material-icons-round group-hover:translate-x-1 transition-transform">download</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 lg:py-24 bg-gradient-to-br from-orange via-red-500 to-pink-500">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl lg:text-5xl font-extrabold text-white mb-6">
+                Siap Memulai Perjalanan Startup-mu?
+            </h2>
+            <p class="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+                Jangan lewatkan kesempatan emas ini! Pendaftaran ditutup 15 Februari 2026
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#daftar" class="inline-flex items-center justify-center px-10 py-4 bg-white text-orange text-lg font-bold rounded-full hover:shadow-2xl transition-all">
+                    Daftar Sekarang
+                    <span class="material-icons-round ml-2">arrow_forward</span>
+                </a>
+                <a href="faq.html" class="inline-flex items-center justify-center px-10 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white text-lg font-bold rounded-full hover:bg-white/20 transition-all">
+                    Lihat FAQ
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="maskot-bara-launchpad.png" alt="Launchpad FILKOM" class="h-12 w-auto">
+                        <div>
+                            <span class="text-xl font-bold block leading-tight">Launchpad</span>
+                            <span class="text-sm font-bold text-orange block leading-tight">FILKOM</span>
+                        </div>
+                    </div>
+                    <p class="text-white/70 mb-6 leading-relaxed">A Digital Startup Incubation Program</p>
+                    <p class="text-sm text-white/60 mb-6">Fakultas Ilmu Komputer<br>Universitas Brawijaya</p>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-orange rounded-full flex items-center justify-center transition-colors">
+                            <span class="material-icons-round text-sm">tag</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-orange rounded-full flex items-center justify-center transition-colors">
+                            <span class="material-icons-round text-sm">link</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-orange rounded-full flex items-center justify-center transition-colors">
+                            <span class="material-icons-round text-sm">mail</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-orange rounded-full flex items-center justify-center transition-colors">
+                            <span class="material-icons-round text-sm">play_arrow</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h5 class="text-lg font-bold mb-6 text-orange">Quick Links</h5>
+                    <ul class="space-y-3">
+                        <li><a href="tentang.html" class="text-white/70 hover:text-orange transition-colors">Tentang Program</a></li>
+                        <li><a href="syarat.html" class="text-white/70 hover:text-orange transition-colors">Syarat & Pendaftaran</a></li>
+                        <li><a href="tahapan.html" class="text-white/70 hover:text-orange transition-colors">Tahapan</a></li>
+                        <li><a href="manfaat.html" class="text-white/70 hover:text-orange transition-colors">Manfaat</a></li>
+                        <li><a href="faq.html" class="text-white/70 hover:text-orange transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="text-lg font-bold mb-6 text-orange">Resources</h5>
+                    <ul class="space-y-3">
+                        <li><a href="download.html" class="text-white/70 hover:text-orange transition-colors">Download Template</a></li>
+                        <li><a href="download.html" class="text-white/70 hover:text-orange transition-colors">Petunjuk Teknis</a></li>
+                        <li><a href="timeline.html" class="text-white/70 hover:text-orange transition-colors">Timeline</a></li>
+                        <li><a href="tim.html" class="text-white/70 hover:text-orange transition-colors">Tim Mentor</a></li>
+                        <li><a href="kontak.html" class="text-white/70 hover:text-orange transition-colors">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="text-lg font-bold mb-6 text-orange">Kontak</h5>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span class="material-icons-round text-orange text-sm mt-0.5">mail</span>
+                            <span class="text-white/70 text-sm">launchpad@filkom.ub.ac.id</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-icons-round text-orange text-sm mt-0.5">phone</span>
+                            <span class="text-white/70 text-sm">+62 xxx-xxxx-xxxx</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-icons-round text-orange text-sm mt-0.5">location_on</span>
+                            <span class="text-white/70 text-sm">Jl. Veteran, Ketawanggede<br>Kota Malang, Jawa Timur 65145</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-white/60 text-sm">© 2026 Launchpad FILKOM - Fakultas Ilmu Komputer Universitas Brawijaya. All rights reserved.</p>
+                <div class="flex gap-6 text-sm">
+                    <a href="#" class="text-white/60 hover:text-orange transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-white/60 hover:text-orange transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        if (mobileBtn) {
+            mobileBtn.addEventListener('click', function() {
+                const mm = document.getElementById('mobile-menu');
+                if (mm) mm.classList.toggle('hidden');
+            });
+        }
+
+        // More menu toggle for compact mobile menu
+        const moreBtn = document.getElementById('more-menu-btn');
+        if (moreBtn) {
+            moreBtn.addEventListener('click', function() {
+                const more = document.getElementById('more-menu');
+                if (more) more.classList.toggle('hidden');
+            });
+        }
+
+        // Desktop 'Lainnya' dropdown toggle + outside click
+        const moreDesktopBtn = document.getElementById('more-menu-desktop-btn');
+        const moreDesktop = document.getElementById('more-menu-desktop');
+        if (moreDesktopBtn && moreDesktop) {
+            moreDesktopBtn.addEventListener('click', function(e) {
+                const expanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', String(!expanded));
+                moreDesktop.classList.toggle('hidden');
+            });
+
+            // Close on outside click
+            document.addEventListener('click', function(event) {
+                if (!moreDesktop.contains(event.target) && !moreDesktopBtn.contains(event.target)) {
+                    if (!moreDesktop.classList.contains('hidden')) {
+                        moreDesktop.classList.add('hidden');
+                        moreDesktopBtn.setAttribute('aria-expanded', 'false');
+                    }
+                }
+            });
+
+            // Close on Escape
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    if (!moreDesktop.classList.contains('hidden')) {
+                        moreDesktop.classList.add('hidden');
+                        moreDesktopBtn.setAttribute('aria-expanded', 'false');
+                    }
+                }
+            });
+        }
+
+        // Smooth Scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (!href || href === '#') return;
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Navbar shadow on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (!navbar) return;
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>

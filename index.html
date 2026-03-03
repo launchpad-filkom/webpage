@@ -136,7 +136,13 @@
                         <div id="more-menu-desktop" class="hidden absolute right-0 mt-2 w-56 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 py-2 z-50">
                             <a href="tahapan.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100">Tahapan</a>
                             <a href="faq.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100">FAQ</a>
-                            <a href="download.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Download</a>
+                            <a href="download.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100">Download</a>
+                            <a href="pengumuman.html" class="block px-4 py-2 text-orange font-semibold hover:bg-orange/5">
+                                <span class="inline-flex items-center gap-1">
+                                    <span class="w-2 h-2 rounded-full bg-orange inline-block animate-pulse"></span>
+                                    Pengumuman
+                                </span>
+                            </a>
                         </div>
                     </div>
 
@@ -169,6 +175,12 @@
                      <a href="tahapan.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Tahapan</a>
                             <a href="faq.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">FAQ</a>
                             <a href="download.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Download</a>
+                            <a href="pengumuman.html" class="block px-4 py-2 text-orange font-semibold hover:bg-orange/5 rounded-lg">
+                                <span class="inline-flex items-center gap-2">
+                                    <span class="w-2 h-2 rounded-full bg-orange inline-block animate-pulse"></span>
+                                    Pengumuman
+                                </span>
+                            </a>
                 </div>
                 <a href="registrasi.html" class="block px-4 py-2 bg-orange text-white text-center rounded-lg font-bold">Daftar Sekarang</a>
             </div>
@@ -200,31 +212,17 @@
                         </a>
                     </div>
                     
-                    <!-- Countdown Timer -->
-                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 inline-block">
-                        <p class="text-white/80 text-sm font-semibold mb-3">Pendaftaran Ditutup Dalam:</p>
-                        <div class="flex gap-4 justify-center">
-                            <div class="text-center">
-                                <div class="text-3xl font-bold text-white" id="days">00</div>
-                                <div class="text-xs text-white/70 mt-1">Hari</div>
-                            </div>
-                            <div class="text-3xl font-bold text-white">:</div>
-                            <div class="text-center">
-                                <div class="text-3xl font-bold text-white" id="hours">00</div>
-                                <div class="text-xs text-white/70 mt-1">Jam</div>
-                            </div>
-                            <div class="text-3xl font-bold text-white">:</div>
-                            <div class="text-center">
-                                <div class="text-3xl font-bold text-white" id="minutes">00</div>
-                                <div class="text-xs text-white/70 mt-1">Menit</div>
-                            </div>
-                            <div class="text-3xl font-bold text-white">:</div>
-                            <div class="text-center">
-                                <div class="text-3xl font-bold text-white" id="seconds">00</div>
-                                <div class="text-xs text-white/70 mt-1">Detik</div>
-                            </div>
+                    <!-- Announcement card (replaces expired countdown) -->
+                    <a href="pengumuman.html" class="group inline-flex items-center gap-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-2xl p-5 border border-white/20 transition-all">
+                        <div class="w-12 h-12 bg-orange rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                            <span class="material-icons-round text-white text-2xl">campaign</span>
                         </div>
-                    </div>
+                        <div class="text-left">
+                            <p class="text-white/75 text-xs font-semibold uppercase tracking-wide mb-0.5">Baru — 20 Feb 2026</p>
+                            <p class="text-white font-bold text-base leading-snug">8 Tim Lolos Seleksi Inkubasi</p>
+                            <p class="text-white/70 text-sm mt-0.5">Lihat daftar lengkap →</p>
+                        </div>
+                    </a>
                 </div>
                 
                 <!-- Right Column - Mascot -->
@@ -250,6 +248,17 @@
                     <img src="maskot-bara-launchpad.png" alt="Maskot Launchpad FILKOM" class="w-full max-w-md sm:max-w-lg lg:max-w-2xl mx-auto relative z-10 animate-float drop-shadow-2xl">
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Announcement Banner -->
+    <section class="py-5 bg-orange">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <a href="pengumuman.html" class="flex items-center justify-center gap-3 text-white hover:opacity-90 transition-opacity">
+                <span class="material-icons-round text-base">campaign</span>
+                <span class="font-semibold text-sm sm:text-base">Pengumuman: 8 Tim telah lolos seleksi Program Inkubasi Launchpad FILKOM 2026</span>
+                <span class="hidden sm:inline-flex items-center gap-1 bg-white/20 rounded-full px-3 py-0.5 text-xs font-bold">Lihat Sekarang <span class="material-icons-round text-xs">arrow_forward</span></span>
+            </a>
         </div>
     </section>
 
@@ -410,7 +419,7 @@
                 Bergabunglah dengan Launchpad dan wujudkan ide inovatifmu menjadi produk digital yang berdampak
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://launchpad.filkom.ub.ac.id/registrasi.html" class="inline-flex items-center justify-center px-10 py-4 bg-white text-orange text-lg font-bold rounded-full hover:shadow-2xl transition-all">
+                <a href="registrasi.html" class="inline-flex items-center justify-center px-10 py-4 bg-white text-orange text-lg font-bold rounded-full hover:shadow-2xl transition-all">
                     Daftar Sekarang
                     <span class="material-icons-round ml-2">arrow_forward</span>
                 </a>
@@ -559,32 +568,6 @@
                 }
             });
         }
-        
-        // Countdown Timer
-        const countDownDate = new Date("February 15, 2026 23:59:59").getTime();
-        
-        const countdown = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = countDownDate - now;
-            
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-            
-            if (distance < 0) {
-                clearInterval(countdown);
-                document.getElementById("days").innerHTML = "00";
-                document.getElementById("hours").innerHTML = "00";
-                document.getElementById("minutes").innerHTML = "00";
-                document.getElementById("seconds").innerHTML = "00";
-            }
-        }, 1000);
         
         // Smooth Scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

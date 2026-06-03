@@ -1,0 +1,132 @@
+{
+  "program": "Launchpad FILKOM - Program Inkubasi Kewirausahaan Digital 2026",
+  "penyelenggara": "Fakultas Ilmu Komputer, Universitas Brawijaya",
+  "tahun": 2026,
+  "teams": [
+    {
+      "id": 1,
+      "nama_startup": "AgroPlus",
+      "tagline": "Help Farmers, Help Future",
+      "deskripsi_produk": "AgroPlus adalah platform agritech berbasis Artificial Intelligence (AI) yang dirancang untuk membantu petani dan perusahaan kopi dalam memantau kesehatan tanaman secara lebih cepat dan akurat. Platform ini memanfaatkan teknologi Computer Vision dan Machine Learning untuk mendeteksi penyakit tanaman, serangan hama, serta defisiensi unsur hara melalui pemindaian gambar daun menggunakan smartphone. Melalui sistem diagnosis real-time, AgroPlus memberikan rekomendasi penanganan tanaman yang lebih tepat sehingga dapat membantu meningkatkan kualitas dan produktivitas kopi spesialti Indonesia. Selain itu, AgroPlus juga menyediakan dashboard analitik yang memudahkan pengguna dalam melakukan pemantauan kondisi lahan dan pengambilan keputusan berbasis data. Dengan fokus pada komoditas kopi dan penggunaan dataset lokal Indonesia, AgroPlus hadir sebagai solusi pertanian presisi yang mendukung keberlanjutan industri kopi nasional. Platform ini juga menghubungkan petani, perusahaan, dan peneliti dalam satu ekosistem digital untuk menciptakan proses budidaya yang lebih efisien, modern, dan terstandarisasi.",
+      "kategori": "AgriTech",
+      "link_produk": {
+        "prototype": "https://www.figma.com/proto/SLjpBu4XnfuJgMrp93F27g/AgroCapture?node-id=1-314&viewport=-687%2C248%2C0.24&t=9vCwfaSgV7y5aTZE-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A267&show-proto-sidebar=1&page-id=0%3A1",
+        "gambar": "https://drive.google.com/drive/folders/1Rk6heXnhxfluJoXglwVBF0WMiLqBtC_S?usp=sharing"
+      },
+      "aset": {
+        "logo": "https://drive.google.com/drive/folders/1Rk6heXnhxfluJoXglwVBF0WMiLqBtC_S?usp=sharing",
+        "foto_tim": null
+      }
+    },
+    {
+      "id": 2,
+      "nama_tim": "Naffi Tech",
+      "nama_startup": "Tolongin.co",
+      "tagline": "Prove Your Skills, Get Hired!",
+      "deskripsi_produk": "Tolongin.co adalah platform digital berbasis web yang menghubungkan mahasiswa dan fresh graduate dengan perusahaan melalui sistem challenge atau studi kasus bisnis nyata. Platform ini membantu mengatasi kesenjangan antara dunia pendidikan dan industri dengan memberikan pengalaman kerja praktis serta portofolio digital yang dapat dinilai langsung oleh perusahaan. Melalui Tolongin.co, perusahaan dapat mengunggah tantangan sesuai kebutuhan industri, sementara pengguna dapat mengerjakan challenge tersebut dalam batas waktu tertentu. Hasil pengerjaan akan tersimpan otomatis sebagai portofolio profesional yang menjadi bukti kompetensi nyata. Platform ini juga dilengkapi fitur validasi identitas berbasis AI serta sistem gamifikasi seperti leaderboard dan badge untuk meningkatkan engagement pengguna. Target pengguna utama Tolongin.co adalah mahasiswa, fresh graduate usia 20-26 tahun yang ingin meningkatkan pengalaman dan portofolio kerja, serta perusahaan yang membutuhkan kandidat siap kerja berbasis penilaian performa nyata.",
+      "kategori": "HRTech / EdTech",
+      "link_produk": {
+        "website": "http://clips.id/tolonginCo",
+        "prototype_gambar": "https://drive.google.com/drive/folders/1rfhJsgbXEOMcRBdq-J4UFa6R_vXG37Av?usp=sharing"
+      },
+      "aset": {
+        "logo": "https://drive.google.com/file/d/1xsmCfAQeLDeok1tBgZARWB609qJjibl7/view?usp=sharing",
+        "foto_tim": "https://drive.google.com/file/d/1Od0iqCo6IhumwFF0dVKoYHdlxDtLkS5H/view?usp=sharing"
+      }
+    },
+    {
+      "id": 3,
+      "nama_tim": "Nexus Kesehatan Indonesia",
+      "nama_startup": "NusaGizi",
+      "tagline": "Pastikan tumbuh kembang anak sempurna",
+      "deskripsi_produk": "NusaGizi adalah platform digital personalized child nutrition yang mengintegrasikan AI rekomendasi menu harian (personalisasi penuh berdasarkan usia, alergi, preferensi tekstur, skor tumbuh kembang, dan catatan medis dokter), kolaborasi ibu–dokter anak–pengasuh (catatan medis terkunci muncul di profil anak, menu AI otomatis beradaptasi dengan constraint medis), serta dokumentasi momen makan (tab Sosmed ala Locket + widget konsistensi harian). 3,5 juta balita mengalami stunting dengan peningkatan terjadi pada kelompok 6-23 bulan, fase di mana anak sepenuhnya bergantung pada MPASI. NusaGizi mengkonfirmasi tiga aktor kunci (Ibu, Dokter, Pengasuh) yang terjalin dalam loop tertutup: pencatatan → rekomendasi AI berbasis constraint → verifikasi medis → dokumentasi. Fase 1 MVP fokus pada dokter & AI rekomendasi beserta seluruh ekosistem pencatatan, KPSP, dan notifikasi. Fase 2 pasca product-market fit akan menghadirkan tombol Pesan Bahan atau Langganan Catering eksklusif dari mitra terseleksi.",
+      "kategori": "HealthTech / NutritionTech",
+      "link_produk": {
+        "prototype": "https://www.figma.com/proto/djswtLNPtuWnDzLAPPDRV5/NUSAGIZI?node-id=470-6&p=f&t=uIxf3TAtJKHr6Juh-1&scaling=scale-down&content-scaling=fixed&page-id=1%3A2"
+      },
+      "aset": {
+        "logo": null,
+        "foto_tim": null
+      }
+    },
+    {
+      "id": 4,
+      "nama_tim": "Pintar Technologies",
+      "nama_startup": "Pasti Pintar",
+      "tagline": "Ekosistem all-in-one berteknologi AI-based personalization, wujudkan mimpi lolos PTN Impian!",
+      "deskripsi_produk": "Pasti Pintar adalah ekosistem pembelajaran digital berbasis website yang menyediakan solusi persiapan UTBK dan seleksi masuk Perguruan Tinggi Negeri (PTN) secara terintegrasi. Produk ini mengusung pendekatan all-in-one yang menggabungkan video pembelajaran on-demand berkualitas tinggi, simulasi try-out dengan sistem penilaian IRT, serta asisten belajar cerdas bernama ASTI (AI Learning Companion). Keunggulan utamanya terletak pada teknologi AI-based personalization yang menyesuaikan jalur belajar siswa berdasarkan data performa dan potensi unik mereka untuk memastikan persiapan yang lebih efektif dan terukur. Hadir sebagai solusi atas fenomena cognitive offloading, platform ini memposisikan AI sebagai mitra pendukung nalar melalui pemahaman konsep mendalam. Target pengguna adalah siswa SMA kelas 12 dan lulusan gap year.",
+      "kategori": "EdTech",
+      "link_produk": {
+        "website": "https://pastipintar.id/"
+      },
+      "aset": {
+        "logo": null,
+        "foto_tim": null
+      }
+    },
+    {
+      "id": 5,
+      "nama_tim": "RUTIP - Ruang Titip",
+      "nama_startup": "RuTip",
+      "tagline": "Titip barangmu, simpan uangmu",
+      "deskripsi_produk": "RuTip (Ruang Titip) adalah platform marketplace digital yang menghubungkan siapa saja yang membutuhkan tempat penyimpanan dengan penyedia ruang kosong terverifikasi di sekitar mereka. Dirancang untuk mereka yang memiliki mobilitas tinggi, RuTip menawarkan solusi penyimpanan yang fleksibel, terjangkau, dan aman — seluruh prosesnya mulai dari pencarian, pemesanan, hingga pembayaran dilakukan secara digital. Keamanan transaksi dijamin melalui sistem berlapis: verifikasi ruangan penyedia, pembayaran escrow, dokumentasi foto serah terima, serta sistem rating dan review yang transparan. Harga ditetapkan berdasarkan kategori dan durasi penyimpanan tanpa biaya tersembunyi, dengan tarif yang jauh lebih terjangkau dibanding solusi penyimpanan konvensional.",
+      "kategori": "Marketplace / Sharing Economy",
+      "link_produk": {
+        "prototype": "https://bit.ly/Rutip-Prototipe",
+        "gambar_cover": "https://drive.google.com/file/d/1sIRpjrbwZRau6QR8OXniFqgoqxJSqCQM/view?usp=sharing"
+      },
+      "aset": {
+        "logo": {
+          "dengan_background": "https://drive.google.com/file/d/1SZ0CD45O9EvxP508jur9ej-HpQdpc8o/view?usp=drive_link",
+          "tanpa_background": "https://drive.google.com/file/d/1Mn7Bz_wOK8lEySyB3pvOH1wYnt0A9Hzg/view?usp=drive_link"
+        },
+        "foto_tim": "https://drive.google.com/file/d/1y3DegVUhg5ZcOeeBdmi8oO-lUeqcBUma/view?usp=sharing"
+      }
+    },
+    {
+      "id": 6,
+      "nama_startup": "Stoqin",
+      "tagline": "Kelola Warung Jadi Mudah, Belanja Stok Lebih Murah",
+      "deskripsi_produk": "Stoqin adalah platform digital berbasis aplikasi mobile yang dirancang untuk mempermudah pengelolaan operasional warung kelontong. Stoqin hadir untuk mengatasi kendala pencatatan manual, pengelolaan stok yang tidak teratur, serta proses restock yang sering memakan waktu dan biaya operasional tambahan. Melalui integrasi sistem kasir digital, manajemen stok pintar, analisis penjualan berbasis AI, dan marketplace grosir yang terhubung langsung dengan distributor, Stoqin membantu pemilik warung mengelola usaha dengan lebih cepat, efisien, dan terarah. Stoqin membawa pengalaman baru dalam mengelola warung yang lebih praktis, modern, dan terintegrasi untuk mendukung transformasi digital usaha ritel tradisional.",
+      "kategori": "RetailTech / UMKM",
+      "link_produk": {
+        "website": "https://stoqin.id/",
+        "prototype": "https://clips.id/PrototypeStoqin",
+        "gambar_banner": "https://drive.google.com/file/d/1kzRhuKPVd4vwv0rEooGMG218GxPH7-Jr/view?usp=drive_link"
+      },
+      "aset": {
+        "logo": "https://drive.google.com/file/d/18QUCvNTe3CzTH_QKOQqkVlZ86H6y_YF2/view?usp=drive_link",
+        "foto_tim": "https://drive.google.com/file/d/1-e9Ff9SSbkC63mdLHeI9Mj2isRioIJeu/view?usp=drive_link"
+      }
+    },
+    {
+      "id": 7,
+      "nama_tim": "Strixindex",
+      "nama_startup": "Strixindex",
+      "tagline": "Telusuri Scopus dan SINTA dengan satu pertanyaan.",
+      "deskripsi_produk": "Strixindex adalah platform riset berbasis AI yang memungkinkan pengguna bertanya dengan bahasa sehari-hari. AI akan melakukan penelusuran web secara real-time serta puluhan juta artikel dari jurnal terindeks Scopus dan SINTA. Jawaban dilengkapi referensi ilmiah terverifikasi, siap dikutip untuk skripsi, tesis, dan publikasi ilmiah. Pengguna juga dapat memfilter hasil berdasarkan indeks jurnal, bahasa publikasi, dan status open access. Strixindex menjadikan proses brainstorming dan literature review yang sangat menyita waktu, kini menjadi lebih mudah dan terarah.",
+      "kategori": "AI / Research Tool",
+      "link_produk": {
+        "website": "http://chat.strixindex.com"
+      },
+      "aset": {
+        "logo": "https://drive.google.com/file/d/1yEO1nzCsFRAc1jOt4Z9SyIDdNI7_ScPj/view?usp=sharing",
+        "foto_tim": null
+      }
+    },
+    {
+      "id": 8,
+      "nama_startup": "WorkUP",
+      "tagline": "Navigate Your Education, Design Your Career",
+      "deskripsi_produk": "Navigasikan perjalanan pendidikanmu untuk mewujudkan karir impian bersama WorkUp. Melalui pendekatan Ikigai dan teknologi kecerdasan buatan, WorkUp hadir sebagai platform konsultan pendidikan digital yang mampu mengidentifikasi jalur karir yang selaras dengan minat, kompetensi, kebutuhan industri, dan nilai profesional. Dengan analisis mendalam terhadap keempat dimensi tersebut, jelajahi roadmap pengembangan diri yang terstruktur dan bertahap, mencakup keterampilan yang perlu dikuasai, sertifikasi yang relevan, hingga pengalaman strategis yang tepat untuk dibangun selama masa studi. Konsultasikan kebutuhan pendidikanmu secara personal bersama Worky, AI Chatbot WorkUp yang siap memberikan rekomendasi, pertimbangan, dan penalaran mendalam untuk mendukung rencana strategis pendidikanmu. Dapatkan juga perspektif lebih luas dari dunia industri, dengan sesi eksklusif bersama profesional HR berpengalaman yang dapat dijadwalkan langsung melalui WorkUp.",
+      "kategori": "EdTech / Career Development",
+      "link_produk": {
+        "prototype": "http://clips.id/workup_prototype"
+      },
+      "aset": {
+        "logo": null,
+        "foto_tim": null
+      }
+    }
+  ]
+}

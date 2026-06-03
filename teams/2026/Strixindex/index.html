@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strixindex - Profil Tim Launchpad FILKOM 2026</title>
+    <meta name="description" content="Strixindex — platform riset berbasis AI yang menelusuri jurnal Scopus dan SINTA dengan bahasa sehari-hari. Tim peserta Launchpad FILKOM 2026.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy': '#1e3a8a',
+                        'orange': '#f97316',
+                        'teal': '#0d9488',
+                        'background-light': '#f8fafc',
+                        'accent': '#4f46e5',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'display': ['DM Sans', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        @keyframes slide-up {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in { animation: slide-up 0.7s ease both; }
+    </style>
+</head>
+<body class="bg-background-light text-slate-900">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="../../../index.html" class="flex items-center gap-2">
+                    <img src="../../../maskot-bara-launchpad.png" alt="Launchpad FILKOM Logo" class="h-14 md:h-16 lg:h-20 w-auto">
+                    <div class="hidden md:flex md:items-center md:space-x-0">
+                        <span class="text-xl md:text-2xl font-bold text-navy leading-tight">Launchpad</span>
+                        <span class="text-xl md:text-2xl font-bold text-orange leading-tight">FILKOM</span>
+                    </div>
+                </a>
+
+                <div class="hidden lg:flex items-center space-x-8 relative">
+                    <nav class="flex items-center space-x-8">
+                        <a href="../../../index.html" class="text-slate-700 hover:text-orange font-medium transition-colors">Home</a>
+                        <a href="../../../tentang.html" class="text-slate-700 hover:text-orange font-medium transition-colors">Tentang</a>
+                        <a href="../../../syarat.html" class="text-slate-700 hover:text-orange font-medium transition-colors">Syarat & Ketentuan</a>
+                    </nav>
+                    <div class="relative">
+                        <button id="more-menu-desktop-btn" aria-expanded="false" class="inline-flex items-center gap-1 text-slate-700 font-medium hover:text-orange transition-colors">
+                            <span>Lainnya</span>
+                            <span class="material-icons-round text-slate-500 text-sm">expand_more</span>
+                        </button>
+                        <div id="more-menu-desktop" class="hidden absolute right-0 mt-2 w-56 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 py-2 z-50">
+                            <a href="../../../tahapan.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100">Tahapan</a>
+                            <a href="../../../faq.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100">FAQ</a>
+                            <a href="../../../download.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100">Download</a>
+                            <a href="../../../pengumuman-2026.html" class="block px-4 py-2 text-orange font-semibold hover:bg-orange/5">
+                                <span class="inline-flex items-center gap-1">
+                                    <span class="w-2 h-2 rounded-full bg-orange inline-block animate-pulse"></span>
+                                    Pengumuman
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="../../../registrasi.html" class="inline-flex items-center bg-orange text-white px-6 py-2.5 rounded-full font-bold hover:bg-orange-600 transition-all shadow-lg shadow-orange-500/30">
+                        Daftar Sekarang
+                    </a>
+                </div>
+
+                <button class="lg:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100" id="mobile-menu-btn">
+                    <span class="material-icons-round">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="hidden lg:hidden bg-white border-t border-slate-200" id="mobile-menu">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="../../../index.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100 rounded-lg">Home</a>
+                <a href="../../../tentang.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100 rounded-lg">Tentang</a>
+                <a href="../../../syarat.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100 rounded-lg">Syarat & Ketentuan</a>
+                <a href="../../../registrasi.html" class="block px-4 py-2 bg-orange text-white text-center rounded-lg font-bold">Daftar Sekarang</a>
+                <button id="more-menu-btn" class="w-full text-left px-4 py-2 rounded-lg hover:bg-slate-100 flex items-center justify-between text-slate-700 font-medium">
+                    <span>Lainnya</span>
+                    <span class="material-icons-round text-slate-500">expand_more</span>
+                </button>
+                <div id="more-menu" class="hidden mt-2 space-y-2">
+                    <a href="../../../tahapan.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100 rounded-lg">Tahapan</a>
+                    <a href="../../../faq.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100 rounded-lg">FAQ</a>
+                    <a href="../../../download.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-100 rounded-lg">Download</a>
+                    <a href="../../../pengumuman-2026.html" class="block px-4 py-2 text-orange font-semibold hover:bg-orange/5 rounded-lg">
+                        <span class="inline-flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-orange inline-block animate-pulse"></span>
+                            Pengumuman
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="pt-24 pb-2 bg-background-light">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex items-center text-sm text-slate-500 gap-2">
+                <a href="../../../index.html" class="hover:text-orange">Home</a>
+                <span class="material-icons-round text-xs">chevron_right</span>
+                <a href="../../../pengumuman-2026.html" class="hover:text-orange">Pengumuman 2026</a>
+                <span class="material-icons-round text-xs">chevron_right</span>
+                <span class="text-slate-700 font-medium">Strixindex</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="relative pt-10 pb-16 lg:pt-14 lg:pb-24 overflow-hidden text-white"
+             style="background: linear-gradient(135deg, #1e1b4b 0%, #4f46e5 50%, #1e3a8a 100%);">
+        <div class="absolute inset-0 opacity-15"
+             style="background-image: radial-gradient(circle at 15% 50%, #4f46e5 0%, transparent 45%), radial-gradient(circle at 85% 20%, #f97316 0%, transparent 45%);"></div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 fade-in">
+            <img src="logo.png" alt="Logo Strixindex" class="h-32 sm:h-40 lg:h-48 w-auto mb-6 drop-shadow-lg">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-white/15 backdrop-blur-sm border border-white/25 rounded-full text-white/95 font-semibold text-xs uppercase tracking-wider mb-6">
+                <span class="material-icons-round text-sm">psychology</span>
+                AI / Research Tool
+            </div>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">Strixindex</h1>
+            <p class="text-xl lg:text-2xl text-white/90 italic mb-6">"Telusuri Scopus dan SINTA dengan satu pertanyaan."</p>
+            <div class="flex flex-wrap gap-3 items-center text-sm text-white/80">
+                <span class="inline-flex items-center gap-2">
+                    <span class="material-icons-round text-base">groups</span>
+                    Tim Strixindex
+                </span>
+                <span class="opacity-50">•</span>
+                <span class="inline-flex items-center gap-2">
+                    <span class="material-icons-round text-base">verified</span>
+                    Peserta Launchpad FILKOM 2026
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Description -->
+    <section class="py-16 lg:py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-3 gap-10">
+                <div class="lg:col-span-2">
+                    <h2 class="text-3xl font-extrabold text-navy mb-6 flex items-center gap-3">
+                        <span class="material-icons-round text-accent">description</span>
+                        Tentang Produk
+                    </h2>
+                    <div class="prose prose-lg max-w-none text-slate-700 leading-relaxed">
+                        <p>Strixindex adalah <strong>platform riset berbasis AI</strong> yang memungkinkan pengguna bertanya dengan bahasa sehari-hari. AI akan melakukan penelusuran web secara real-time serta puluhan juta artikel dari jurnal terindeks <strong>Scopus dan SINTA</strong>.</p>
+
+                        <figure class="my-8">
+                            <img src="prototipe.png" alt="Tampilan prototype Strixindex" class="w-full h-auto rounded-2xl border border-slate-200 shadow-sm" loading="lazy">
+                            <figcaption class="text-sm text-slate-500 text-center mt-3 italic">Antarmuka platform riset AI Strixindex</figcaption>
+                        </figure>
+
+                        <p>Jawaban dilengkapi <strong>referensi ilmiah terverifikasi</strong>, siap dikutip untuk skripsi, tesis, dan publikasi ilmiah. Pengguna juga dapat memfilter hasil berdasarkan indeks jurnal, bahasa publikasi, dan status open access.</p>
+                        <p>Strixindex menjadikan proses <em>brainstorming dan literature review</em> yang sangat menyita waktu, kini menjadi lebih mudah dan terarah.</p>
+                    </div>
+                </div>
+
+                <aside class="lg:col-span-1">
+                    <div class="bg-background-light border border-slate-200 rounded-2xl p-6 sticky top-28">
+                        <div class="flex items-center justify-center bg-white border border-slate-200 rounded-xl p-4 mb-5">
+                            <img src="logo-text.png" alt="Logo Strixindex dengan teks" class="max-h-20 w-auto object-contain">
+                        </div>
+                        <h3 class="text-lg font-bold text-navy mb-4 flex items-center gap-2">
+                            <span class="material-icons-round text-accent">info</span>
+                            Info Singkat
+                        </h3>
+                        <ul class="space-y-4 text-sm">
+                            <li>
+                                <div class="text-slate-500 mb-1">Nama Startup</div>
+                                <div class="font-semibold text-slate-800">Strixindex</div>
+                            </li>
+                            <li>
+                                <div class="text-slate-500 mb-1">Nama Tim</div>
+                                <div class="font-semibold text-slate-800">Strixindex</div>
+                            </li>
+                            <li>
+                                <div class="text-slate-500 mb-1">Kategori</div>
+                                <div class="font-semibold text-slate-800">AI / Research Tool</div>
+                            </li>
+                            <li>
+                                <div class="text-slate-500 mb-1">Sumber Data</div>
+                                <div class="font-semibold text-slate-800">Scopus, SINTA, Web Real-time</div>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tim -->
+    <section class="py-16 lg:py-20 bg-white border-t border-slate-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-navy mb-3 flex items-center gap-3">
+                <span class="material-icons-round text-accent">groups</span>
+                Tim Strixindex
+            </h2>
+            <p class="text-slate-600 mb-10 max-w-2xl">Tim di balik Strixindex yang membangun platform riset AI berbasis jurnal Scopus & SINTA untuk mempermudah literature review.</p>
+            <figure class="rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+                <img src="strixindex-team.jpeg" alt="Foto tim Strixindex" class="w-full h-auto object-cover" loading="lazy">
+            </figure>
+        </div>
+    </section>
+
+    <!-- Resources / Links -->
+    <section class="py-16 lg:py-20 bg-background-light">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-navy mb-10 flex items-center gap-3">
+                <span class="material-icons-round text-accent">link</span>
+                Produk & Resources
+            </h2>
+            <div class="grid sm:grid-cols-2 gap-5">
+                <a href="http://chat.strixindex.com" target="_blank" rel="noopener"
+                   class="group bg-white border-2 border-slate-200 hover:border-accent rounded-2xl p-6 transition-all hover:shadow-lg sm:col-span-2">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-colors">
+                            <span class="material-icons-round text-accent group-hover:text-white">chat</span>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-navy mb-1">chat.strixindex.com</h3>
+                            <p class="text-sm text-slate-600">Coba platform riset AI secara langsung</p>
+                            <div class="text-xs text-accent font-semibold mt-2 inline-flex items-center gap-1">
+                                Buka link
+                                <span class="material-icons-round text-sm">open_in_new</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-gradient-to-br from-navy to-teal text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl lg:text-4xl font-extrabold mb-4">Jelajahi Tim Lainnya</h2>
+            <p class="text-lg text-white/85 mb-8 max-w-2xl mx-auto">Temukan tim-tim startup inovatif lain yang lolos seleksi Launchpad FILKOM 2026.</p>
+            <a href="../../../pengumuman-2026.html" class="inline-flex items-center justify-center px-8 py-3.5 bg-white text-navy font-bold rounded-full hover:shadow-xl transition-all">
+                <span class="material-icons-round mr-2">arrow_back</span>
+                Kembali ke Pengumuman
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <img src="../../../maskot-bara-launchpad.png" alt="Launchpad FILKOM" class="h-12 w-auto">
+                        <div>
+                            <div class="font-bold text-lg">Launchpad<span class="text-orange">FILKOM</span></div>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 text-sm">Program inkubasi startup digital untuk mahasiswa FILKOM Universitas Brawijaya</p>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="../../../index.html" class="text-slate-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="../../../tentang.html" class="text-slate-400 hover:text-white transition-colors">Tentang</a></li>
+                        <li><a href="../../../tahapan.html" class="text-slate-400 hover:text-white transition-colors">Tahapan</a></li>
+                        <li><a href="../../../syarat.html" class="text-slate-400 hover:text-white transition-colors">Syarat & Ketentuan</a></li>
+                        <li><a href="../../../faq.html" class="text-slate-400 hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="../../../pengumuman-2026.html" class="text-orange hover:text-orange/80 transition-colors font-semibold">Pengumuman</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4">Hubungi Kami</h3>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li class="flex items-center gap-2">
+                            <span class="material-icons-round text-orange text-sm">place</span>
+                            Fakultas Ilmu Komputer, Universitas Brawijaya
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 text-center text-sm text-slate-400">
+                <p>&copy; 2026 Launchpad FILKOM. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        const moreBtn = document.getElementById('more-menu-btn');
+        if (moreBtn) {
+            moreBtn.addEventListener('click', function() {
+                document.getElementById('more-menu').classList.toggle('hidden');
+            });
+        }
+        const moreDesktopBtn = document.getElementById('more-menu-desktop-btn');
+        const moreDesktop = document.getElementById('more-menu-desktop');
+        if (moreDesktopBtn && moreDesktop) {
+            moreDesktopBtn.addEventListener('click', function() {
+                const expanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', String(!expanded));
+                moreDesktop.classList.toggle('hidden');
+            });
+            document.addEventListener('click', function(e) {
+                if (!moreDesktop.contains(e.target) && !moreDesktopBtn.contains(e.target)) {
+                    moreDesktop.classList.add('hidden');
+                    moreDesktopBtn.setAttribute('aria-expanded', 'false');
+                }
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    moreDesktop.classList.add('hidden');
+                    moreDesktopBtn.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (!navbar) return;
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
